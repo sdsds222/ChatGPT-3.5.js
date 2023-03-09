@@ -4,6 +4,8 @@
 一个用原生JavaScript和编写的ChatGPT聊天界面，基于openai的GPT-3.5 turbo API接口实现，
 并使用官方接口文档提供的方案实现了记忆历史对话上下文的功能，使其可以持续对话，可实现与官网ChatGPT接近的持续性对话效果。
 
+根据官网文档信息，使用费用相较于之前的003模型便宜90%。
+
 静态网页：http://sdsds222.gitee.io/chat-gpt.js/
 
 
