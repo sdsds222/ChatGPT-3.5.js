@@ -6,7 +6,7 @@
 
 根据官网文档信息，使用费用相较于之前的003模型便宜90%。
 
-静态网页：http://sdsds222.gitee.io/chat-gpt.js/
+静态网页：http://sdsds222.gitee.io/chat-gpt-3.5.js
 
 
 ![记忆对话功能演示](img/1.png)
