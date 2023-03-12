@@ -202,7 +202,7 @@
                     case "fp": window.fp = Number(prompt("Frequency_penalty 请输入一个-2.0到2.0的一位小数,默认为0")); addText("设置成功"); break;
                     case "pp": window.pp = Number(prompt("Presence_penalty 请输入一个-2.0到2.0的一位小数,默认为0")); addText("设置成功"); break;
                     case "mode": window.mode = prompt("mode 输入“true”开启持续对话模式,输入“false”关闭该模式,默认为“true”"); addText("设置成功"); break;
-                    case "csize": window.csize = prompt("csize 用于设置记忆历史对话的条数,默认为30条"); addText("设置成功"); break;
+                    case "csize": window.csize = Number(prompt("csize 用于设置记忆历史对话的条数,默认为30条")); addText("设置成功"); break;
                     default: alert("未知指令");
                 }
                 inputbox.value = "";
@@ -211,10 +211,12 @@
             if (window.mode == "false") {
                 histories = [];
             }
-            if (histories.length > window.csize) {
-                histories.slice(-window.csize);
-            }
+
             histories.push({ "role": window.username, "content": intputtext });
+            
+            if (histories.length > window.csize) {
+                histories = histories.slice(-window.csize);
+            }
             addText(window.username + "说：\n\n" + intputtext);
             textarea.value += '\n正在请求数据......';
             textarea.scrollTop = textarea.scrollHeight;
